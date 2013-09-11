@@ -1,0 +1,11 @@
+;------------------------------------
+; TIMELINE.DEF module definition file
+;------------------------------------
+
+NAME          TIMELINE  WINDOWAPI
+
+DESCRIPTION   'Time and Date Display (c) 1989, Ziff Communications Co.'
+PROTMODE
+HEAPSIZE      1024
+STACKSIZE     8192
+EXPORTS       ClientWndProc

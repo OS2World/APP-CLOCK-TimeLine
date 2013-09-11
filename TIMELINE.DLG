@@ -1,0 +1,56 @@
+DLGINCLUDE 1 "TIMELINE.H"
+
+DLGTEMPLATE timeline_help LOADONCALL MOVEABLE DISCARDABLE 
+BEGIN
+    DIALOG "TIMELINE HELP", timeline_help, 8, 34, 321, 167, FS_NOBYTEALIGN | 
+                FS_DLGBORDER | WS_VISIBLE | WS_CLIPSIBLINGS | WS_SAVEBITS, 
+                FCF_TITLEBAR
+    BEGIN
+        CONTROL "Esc=Cancel", 2, 118, 9, 54, 12, WC_BUTTON, BS_PUSHBUTTON | 
+                BS_DEFAULT | WS_TABSTOP | WS_VISIBLE
+        CONTROL "F1 displays this help message", timeline_f1, 13, 153, 136, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "F3 terminates the display", timeline_f3, 13, 104, 122, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Alt+F4 terminates the display", timeline_altf4, 13, 95, 132, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Mouse Button 1 drags the display (ESC cancels)", timeline_mb1, 13, 145, 213, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Double clicking Mouse Button 1 terminates the display", 
+                timeline_mb1double, 13, 112, 240, 8, WC_STATIC, SS_TEXT | 
+                DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Clicking Mouse Button 2 cycles the color of the display", 
+                timeline_mb2, 13, 129, 243, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "TIMELINE x y color     (e.g. TIMELINE 0 0 RED) or", timeline_cmd, 51, 76, 218, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "x = x coordinate of lower left corner of display (0 to screen max)", 
+                timeline_x, 19, 60, 274, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "y =  y coordinate of lower left corner of display (0 to screen max)", 
+                timeline_y, 19, 52, 278, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "TIMELINE                   (uses previous position and color)", 
+                timeline_cmd2, 51, 68, 240, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Start by:", timeline_start, 11, 76, 36, 8, WC_STATIC, 
+                SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "background, blue, red, pink, green, cyan, yellow, neutral,", 
+                timeline_colors, 52, 44, 244, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "color =", timeline_color, 19, 44, 30, 8, WC_STATIC, SS_TEXT | 
+                DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "darkgray, darkblue, darkred, darkpink, darkgreen,", timeline_colors2, 52, 36, 214, 8, 
+                WC_STATIC, SS_TEXT | DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "darkcyan, brown, palegray (i.e. the default pallette)", 
+                timeline_colors3, 52, 28, 220, 8, WC_STATIC, SS_TEXT | 
+                DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Alt+F7, then arrow keys, then Enter drags the display (ESC cancels)", 
+                timeline_AltF7, 14, 137, 287, 8, WC_STATIC, SS_TEXT | DT_LEFT | 
+                DT_TOP | WS_GROUP | WS_VISIBLE
+        CONTROL "Up and Down arrow keys cycle the color of the display", 
+                timeline_arrows, 13, 121, 250, 8, WC_STATIC, SS_TEXT | 
+                DT_LEFT | DT_TOP | WS_GROUP | WS_VISIBLE
+    END
+END
+

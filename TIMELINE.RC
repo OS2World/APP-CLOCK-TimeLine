@@ -1,0 +1,9 @@
+#include <os2.h>
+#include "timeline.h"
+
+ACCELTABLE timeline_help PRELOAD
+BEGIN
+  VK_F1, WM_HELP, VIRTUALKEY, HELP
+END
+
+rcinclude timeline.dlg
