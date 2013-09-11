@@ -9,7 +9,7 @@ LICENSE
 
 COMPILE TOOLS
 ===============
-* 
+* Microsoft C 5.1
 
 AUTHORS
 ===============
